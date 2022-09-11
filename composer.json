@@ -1,0 +1,7 @@
+{
+    "require": {
+        "phpauth/phpauth": "dev-master",
+        "phpoffice/phpspreadsheet": "^1.18",
+        "mikehaertl/phpwkhtmltopdf": "^2.5"
+    }
+}

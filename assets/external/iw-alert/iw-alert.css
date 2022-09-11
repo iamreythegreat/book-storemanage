@@ -1,0 +1,353 @@
+.iwAlertContainer {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:20000;
+    display:none;
+}
+
+.iwAlertBackdrop {
+    background: rgba(0, 0, 0, 0.2);
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    display:flex;
+    align-items:center;
+}
+
+.iwAlertBox {
+    width:400px;
+    min-height:200px;
+    background:#fff;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    border-radius:8px;
+    overflow:hidden;
+    position:relative;
+}
+
+.iwAlertBody {
+    flex:1;
+    padding:10px 15px;
+    font-size:16px;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    color: #4a5261;
+    flex-wrap: wrap;
+}
+
+.iwAlertBody p:first-child {
+    margin-top:0;
+}
+
+.iwAlertBody p:last-child {
+    margin-bottom:0;
+}
+
+.iwAlertBox .iwAlertContent {
+    max-width:100%;
+}
+
+.iwAlertBox .iwAlertContent.fullWidth {
+    flex: 0 0 100%;
+}
+
+.iwAlertActions {
+    flex:0 0 50px;
+}
+
+.iwActions_alert,
+.iwActions_confirm {
+    height:50px;
+}
+
+.iwAlertContainer .btn.iwAlertBtn,
+.iwAlertContainer .btn.iwAlertBtn:hover {
+    box-shadow:none;
+    height:100%;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition: background-color 0.2s;
+    font-size:16px;
+}
+
+.btn.iwAlertBtn.iwAlertOk {
+    background:#f2f2f2;
+}
+
+.btn.iwAlertBtn.iwAlertOk:hover {
+    background:#eee;
+}
+
+.iwActions_confirm {
+    display:flex;
+}
+.btn.iwAlertBtn{
+    border-radius:0;
+}
+.btn.iwAlertBtn.iwAlertYes,
+.btn.iwAlertBtn.iwAlertNo {
+    flex:1;
+}
+
+.btn.iwAlertBtn.iwAlertYes {
+    background:#26C281;
+    color:#fff;
+}
+
+.btn.iwAlertBtn.iwAlertYes:hover {
+    background:#1e9765;
+}
+
+.btn.iwAlertBtn.btn-danger {
+    background:#dc3545;
+    color:#fff;
+}
+
+.btn.iwAlertBtn.btn-danger:hover {
+    background:#de6370;
+    color:#fff;
+}
+
+.btn.iwAlertBtn.iwAlertNo {
+    background:#f2f2f2;
+}
+
+.btn.iwAlertBtn.iwAlertNo:hover {
+    background:#eee;
+}
+
+.iwAlertPromptWrap {
+    flex: 0 0 100%;
+}
+
+.iwPromptInput,
+.iwPromptInputValue {
+    width: 100%;
+    background    : #F2F2F2;
+    border        : 2px solid #F2F2F2;
+    border-radius : 4px;
+    color         : #555555;
+    font-size     : 16px;
+    font-weight   : 400;
+    padding       : 9px 15px;
+    width         : 100%;
+    -webkit-appearance: none;
+    flex: 1;
+}
+
+.iwPromptInput:focus {
+    outline    : none;
+    border     : 2px solid #e6e6e6;
+    background : #fafafa;
+}
+
+.iwPromptInputValue.disabled {
+    outline    : none;
+    border     : 2px solid #e6e6e6;
+    background : #fafafa;
+}
+
+.iwAlertPrompt-time .iwPromptInputValue.disabled {
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.iwAlertPrompt-select select.iwPromptInput:not([multiple]) {
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMi4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCA0LjkgMTAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQuOSAxMDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4NCgkuc3Qwe2ZpbGw6IzQ0NDQ0NDt9DQo8L3N0eWxlPg0KPHRpdGxlPmFycm93czwvdGl0bGU+DQo8cG9seWdvbiBjbGFzcz0ic3QwIiBwb2ludHM9IjMuNSw0LjMgMi41LDUuNyAxLjQsNC4zICIvPg0KPC9zdmc+DQo=);
+    background-repeat: no-repeat;
+    background-position: 95% 50%;
+}
+
+.iwAlertLoader {
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    background: #ffffffaa;
+    padding:20px;
+    min-height:60px;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.iwAlertLoaderContent {
+    margin-bottom:20px;
+}
+
+.iwAlertLoader > span {
+    width:50px;
+    height:50px;
+    border:3px solid #eee;
+    border-radius:50px;
+    position:absolute;
+    left:0;
+    right:0;
+    margin:auto;
+}
+
+.iwAlertLoader > span:last-child {
+    border-color:#666 transparent transparent;
+    animation:fa-spin 0.6s infinite linear;
+}
+
+/* Time Picker */
+.iwTimePicker {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 400px;
+    background: white;
+    box-shadow: 0 0 16px #ccc;
+    margin-top: 32em;
+    border-radius: 4px;
+    display: none;
+    align-items: stretch;
+    overflow:hidden;
+    font-size:16px;
+    flex-wrap: wrap;
+    z-index: 21000;
+}
+
+.iwTimePicker.active {
+    display: flex;
+}
+
+.iwTimePickerHours,
+.iwTimePickerMinutes,
+.iwTimePickerMeridians {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 0 33.3333%;
+    font-size:1em;
+    align-content: baseline;
+    border-right: 2px solid #8e98a4;
+}
+
+.iwTimePickerTitle {
+    flex: 1;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight:500;
+    padding: 8px;
+    background: #515a65;
+    color: #fff;
+    flex: 0 0 33.3333%;
+    /* height: 2.45em; */
+}
+
+.iwTimePickerMeridians {
+    border-right: none;
+    height: auto;
+    flex-direction: column;
+}
+
+.iwTimePickerHour,
+.iwTimePickerMinute,
+.iwTimePickerMeridian {
+    padding: 10px 15px;
+    text-align: center;
+    font-weight:bold;
+    cursor:pointer;
+    flex: 0 0 50%;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    color:#666;
+    /* height: 2.7em; */
+}
+
+.iwTimePickerHour:nth-child(2n),
+.iwTimePickerMinute:nth-child(2n) {
+    border-right: none;
+}
+
+.iwTimePickerMeridian {
+    width: 100%;
+    border-right: none;
+    flex: 0;
+}
+
+.iwTimePickerHour:last-child,
+.iwTimePickerMinute:last-child,
+.iwTimePickerHour:nth-child(11),
+.iwTimePickerMinute:nth-child(11),
+.iwTimePickerMeridian:last-child {
+    border-bottom:none;
+}
+
+.iwTimePickerHour:hover,
+.iwTimePickerMinute:hover,
+.iwTimePickerMeridian:hover {
+    background:#eee;
+    color:#333;
+}
+
+.iwTimePickerHour.active,
+.iwTimePickerMinute.active,
+.iwTimePickerMeridian.active {
+    background:#3598dc;
+    color:#fff;
+}
+
+.iwTimePickerActions {flex: auto;display: flex;align-items: flex-end;flex-wrap: wrap;align-content: flex-end;padding: 0 10px 10px;}
+
+.iwTimePickerMeridians .iwTimePickerTitle {
+    width: 100%;
+    flex: 0;
+}
+
+.iwTimePicker .iwTimePickerAction,
+.iwTimePicker .btn.iwTimePickerAction {
+    flex: 0 0 100%;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 4px;
+    box-shadow:none;
+}
+
+.iwTimePicker .iwTimePickerAction:hover,
+.iwTimePicker .btn.iwTimePickerAction:hover {
+    box-shadow:none;
+}
+
+.iwTimePickerTitles {
+    flex: 0 0 100%;
+    display: flex;
+    align-self: baseline;
+}
+
+.iwTimePicker.manual-positioned {
+    margin: auto;
+    right: auto;
+    bottom: auto;
+}
+
+.iwTimePicker.interval-10 .iwTimePickerMinute {
+    display:none;
+    flex: 0 0 100%;
+}
+
+.iwTimePicker.interval-10 .iwTimePickerMinute.interval-10 {
+    display:block;
+}
+
+.iwAlertBox .error-message {
+    white-space: pre;
+    padding: .5rem;
+    text-align:left;
+    border-radius: .2rem;
+    max-height:300px;
+    background-color: #f3f3f3;
+    font-family: "Roboto Mono";
+    overflow: auto;
+}
