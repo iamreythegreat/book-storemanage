@@ -9,6 +9,8 @@ Settings of parameters can be found at:
 run composer to genrate autload file.
 composer install --no-dev
 
+NOTE: place/run the app in root directory not in a folder
+
 Admin access
 two admin users are set for inital setup, with their respective password.
 admin C0c0m3l0n
