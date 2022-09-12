@@ -23,10 +23,11 @@
         <div class="text-center m-b-md custom-login">
           <h3>LIBRARY ADMIN</h3>
         </div>
+        <form name="login" action="gologin.php" method="POST"> 
         <div class="content-error">
           <div class="hpanel">
             <div class="panel-body">
-              <form action="#" id="loginForm">
+              <!-- <form action="#" id="loginForm"> -->
                 <div class="form-group">
                   <label class="control-label" for="username">Username</label>
                   <input
@@ -74,19 +75,19 @@
       .on("click", "#btnlogin", (event) => login())
       .ready(() => {});
 
-    function login() {
-      $.ajax({
-        url: "/gologin.php",
-        type: "POST",
-        data: $("#loginForm").serialize(),
-        success: function (response) {
-          if (response == 1) {
-            window.location = "dashboard.php";
-          } else {
-            alert("ENHANCE::INCORRECT");
-          }
-        },
-      });
-    }
+    // function login() {
+    //   $.ajax({
+    //     url: "/gologin.php",
+    //     type: "POST",
+    //     data: $("#loginForm").serialize(),
+    //     success: function (response) {
+    //       if (response == 1) {
+    //         window.location = "dashboard.php";
+    //       } else {
+    //         alert("ENHANCE::INCORRECT");
+    //       }
+    //     },
+    //   });
+    // }
   </script>
 </html>

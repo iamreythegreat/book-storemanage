@@ -6,6 +6,9 @@ require __DIR__ . "/controllers/user.Controller.php";
 require __DIR__ . "/controllers/books.Controller.php";
 require __DIR__ . "/controllers/library.Controller.php";
 
+if ( !isset($_SESSION['active']) ) {
+    header("location: /");
+}
 
         $countBooks = books::countBooks();        
         $lib   = new library();
