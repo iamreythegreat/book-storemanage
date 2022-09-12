@@ -12,7 +12,7 @@ class UserModel {
         $row->execute();
         $result = $row->fetch();
         
-        return $result['pass'];
+        if ($result) return $result['pass'];
 
     }
 
