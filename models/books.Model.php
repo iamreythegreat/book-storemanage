@@ -83,12 +83,16 @@ class bookModel {
 
         $s = "INSERT INTO `books` (`title`, `author`, `published`) VALUES (:title, :author, :published)";
         $q = $db->prepare($s);
+
         $q->bindValue(":title"  , $data['title'], PDO::PARAM_STR);
         $q->bindValue(":author" , $data['author'], PDO::PARAM_STR);        
-        $q->bindValue(":published", $data['published'], PDO::PARAM_INT);
-        $q->execute();
-        
+        $q->bindValue(":published", $data['published'], PDO::PARAM_INT); 
+        $result  = $q->execute();
+
         $newId = $db->lastInsertId();
+
+        if (!isset($data['library']))
+            return $newId;
 
         if ( count( $data['library'] ) > 0) {
             foreach($data['library'] as $item) {
@@ -99,6 +103,8 @@ class bookModel {
                 $q->execute();
             }
         }
+
+         return $newId;
 
     }
     

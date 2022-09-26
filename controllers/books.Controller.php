@@ -85,7 +85,7 @@ class books extends controller {
     /*
     createBooks() cretate book
     */  
-    function createBooks(array $data){
+    function createBook(array $data){
         return bookModel::create($data);
     }
 
